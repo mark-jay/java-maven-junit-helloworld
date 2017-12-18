@@ -41,13 +41,13 @@ public class HelloTest {
         assertThat(os.toString(), is(equalTo(goal)));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = NullPointerException.class)
     public void testIllegalArgumentForHello21() {
         Hello hi = new Hello();
         hi.setTimes(Hello.MAXIMUM_AMOUNT_OF_TIMES + 1);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = NullPointerException.class)
     public void testIllegalArgumentForHelloNegative() {
         Hello hi = new Hello();
         hi.setTimes(-1);
